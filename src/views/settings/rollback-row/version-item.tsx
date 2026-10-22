@@ -1,13 +1,12 @@
 import { ArrowDownToLine, Check } from "../icons";
 import { useState } from "react";
 import { useT } from "@/lib/i18n";
+import { RELEASES_URL } from "@/lib/updater/release-links";
 import { installerUrl, type VersionEntry } from "@/lib/updater/versions";
 import { openUrl } from "@/lib/window";
 import { SButton } from "../ui";
 import { VERSION_BADGE } from "./badge";
 import { VersionNotesModal } from "./version-notes-modal";
-
-const RELEASES_URL = "https://github.com/harborstremio/harbor/releases";
 
 export function VersionItem({ entry, isCurrent }: { entry: VersionEntry; isCurrent: boolean }) {
   const t = useT();

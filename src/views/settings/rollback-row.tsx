@@ -3,14 +3,13 @@ import { IS_BETA_BUILD } from "@/lib/build-info";
 import { useT } from "@/lib/i18n";
 import { useSettings } from "@/lib/settings";
 import { currentVersion, type VersionEntry } from "@/lib/updater/versions";
+import { RELEASES_URL } from "@/lib/updater/release-links";
 import { openUrl } from "@/lib/window";
 import { ROW_DESC, SettingRow } from "./kit";
 import { SButton } from "./ui";
 import { useVersionHistory } from "./rollback-row/use-version-history";
 import { VERSION_BADGE } from "./rollback-row/badge";
 import { VersionItem } from "./rollback-row/version-item";
-
-const RELEASES_URL = "https://github.com/harborstremio/harbor/releases";
 
 export function RollbackRow() {
   const t = useT();
